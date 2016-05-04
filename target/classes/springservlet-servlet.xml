@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!-- AbstractController -->
+ 	<bean id="danMuController"  class="org.springframework.web.servlet.mvc.ParameterizableViewController">  
+    	<property name="viewName" value="DanMuWS"/>  
+	</bean>
+	<bean id="shootDanMuController" class="com.liu.controller.ShootDanmuController">
+		<property name="danMuService" ref="danMuService" />
+	</bean>
+	<bean id="asynSendDanMuController" class="com.liu.controller.AsynSendDanMuController">
+		<property name="danMuService" ref="danMuService" />
+	</bean>
+ 	
+ 	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+ 		<property name="mappings">
+ 			<props>
+ 				<prop key="/danmu">danMuController</prop>
+ 				<prop key="/sendDanmu">shootDanMuController</prop>
+ 				<prop key="/getdanmu">asynSendDanMuController</prop>
+ 			</props>
+ 		</property>
+ 		<property name="order" value="0" />
+ 	</bean>
+	
+	
+	
+	<bean class="org.springframework.web.servlet.view.XmlViewResolver">
+		<property name="location">
+			<value>/WEB-INF/classes/view.xml</value>
+		</property>
+		<property name="order" value="0" />
+	</bean>
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix"><value>/WEB-INF/jsp/</value></property>
+		<property name="suffix"><value>.jsp</value></property>
+		<property name="order" value="1" />
+	</bean>
+
+	
+</beans>

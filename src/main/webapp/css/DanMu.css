@@ -1,0 +1,119 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+
+body{
+	background: url('../img/bkg_beauty.jpg') no-repeat scroll;
+}
+
+.dm{
+	display: none;
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+}
+.dm_screen{
+	position: relative;
+	width:100%;
+	height:100%;
+}
+
+.s_mask{
+	width:100%;
+	height:100%;
+	position: absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+}
+
+.s_mask{
+	background: #000;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+}
+
+#dm_del{
+	width:42px;
+	height:42px;
+	font:normal bold 22px/42px '微软雅黑';
+	text-align: center;
+	position: absolute;
+	top:10px;
+	right:20px;
+	border-radius:21px;
+	background: orange; 
+	text-decoration: none;
+	color:black;
+	z-index: 2;
+}
+#dm_del:hover{
+	cursor: pointer;
+	background-color: red;
+}
+
+.dm_con{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow: hidden;
+}
+.dm_con div{
+	position: absolute;
+	top:10px;
+	left:0px;
+	font:normal 500 25px/22px '微软雅黑';
+	height:22px;
+	z-index:3;
+	color:white;
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.dm_bottom,.bottom_mask{
+	position: absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:72px;
+	z-index:3;
+}
+
+.dm_bottom{
+	text-align: center;
+}
+.bottom_mask{
+	background:#000;
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+
+#dm_content,#btn_shoot{
+	position: relative;
+	z-index: 3;
+	font-size: 18px;
+	border:0;
+	outline: none;
+	top:18px;
+}
+#dm_content{
+	width:40%;
+	height:36px;
+	border-radius: 4px 0px 0px 4px;
+	padding:2px 5px 2px 5px;
+}
+
+#btn_shoot{
+	width:12%;
+	height:36px;
+	font-weight: bold;
+	background-color:#83bb1c;
+	border-radius: 0px 4px 4px 0px;
+}
+#btn_shoot:hover{
+	cursor: pointer;
+	background-color:#569904;
+}
