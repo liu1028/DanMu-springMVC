@@ -8,4 +8,4 @@ This is a springMVC test.
 
 主要运用到的技术就是：Servlet3.1新增加的WebSocket，前端的页面布局和jQuery实现的弹幕效果
 
-##网页浏览地址是：[http://zhonghuiblog.com:8080/DanMu/spring/danmu](http://zhonghuiblog.com:8080/DanMu/spring/danmu)
+##网页浏览地址是：[http://121.42.153.166:8080/DanMu/spring/danmu](http://121.42.153.166:8080/DanMu/spring/danmu)
